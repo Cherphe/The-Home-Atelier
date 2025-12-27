@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin | The Home Atelier</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="fade">
+
+<section id="loginBox">
+  <img src="logo.png" class="logo center">
+  <h2>Admin Login</h2>
+  <input id="pinInput" type="password" placeholder="Enter PIN">
+  <button onclick="login()">Login</button>
+</section>
+
+<section id="adminBox" class="hidden">
+  <img src="logo.png" class="logo center">
+  <h2>Admin Workspace</h2>
+
+  <input id="nameInput" placeholder="Product name">
+  <input id="priceInput" type="number" placeholder="Price (₦)">
+  <textarea id="descInput" placeholder="Product description"></textarea>
+  <input id="imageInput" type="file" accept="image/*">
+
+  <button onclick="addProduct()">Save Product</button>
+  <button onclick="logout()">Logout</button>
+
+  <div id="adminProducts" class="grid"></div>
+</section>
+
+<footer>
+  <p>© <span id="year"></span> The Home Atelier | HackShield Tech</p>
+</footer>
+
+<script src="admin.js"></script>
+</body>
+</html>
